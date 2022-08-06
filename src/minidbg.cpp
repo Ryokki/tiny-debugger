@@ -11,6 +11,13 @@
 
 using namespace minidbg;
 
+/**
+ * @brief 
+ * 
+ * @param s 
+ * @param delimiter 
+ * @return std::vector<std::string> 
+ */
 std::vector<std::string> split(const std::string &s, char delimiter) {
     std::vector<std::string> out{};
     std::stringstream ss {s};
@@ -43,7 +50,7 @@ void debugger::handle_command(const std::string& line) {
 void debugger::run() {
     int wait_status;
     auto options = 0;
-    waitpid(m_pid, &wait_status, options);
+    waitpid(m_pid, &wait_status, options);  // first time to get control (wait_status = 1407)
 
     char* line = nullptr;
     while((line = linenoise("minidbg> ")) != nullptr) {
@@ -58,7 +65,7 @@ void debugger::continue_execution() {
 
     int wait_status;
     auto options = 0;
-    waitpid(m_pid, &wait_status, options);
+    waitpid(m_pid, &wait_status, options);  // wait_status = 0, because of child process finished
 }
 
 void execute_debugee (const std::string& prog_name) {
@@ -81,7 +88,6 @@ int main(int argc, char* argv[]) {
     if (pid == 0) {
         //child
         execute_debugee(prog);
-
     }
     else if (pid >= 1)  {
         //parent

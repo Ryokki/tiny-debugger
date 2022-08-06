@@ -1,0 +1,7 @@
+/root/gitproject/minidbg/CMakeFiles/rebuild_cache.dir
+/root/gitproject/minidbg/CMakeFiles/edit_cache.dir
+/root/gitproject/minidbg/CMakeFiles/libelfin.dir
+/root/gitproject/minidbg/CMakeFiles/unwinding.dir
+/root/gitproject/minidbg/CMakeFiles/hello.dir
+/root/gitproject/minidbg/CMakeFiles/variable.dir
+/root/gitproject/minidbg/CMakeFiles/minidbg.dir

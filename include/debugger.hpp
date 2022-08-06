@@ -18,7 +18,7 @@ namespace minidbg {
         void continue_execution();        
         
         std::string m_prog_name;
-        pid_t m_pid;
+        pid_t m_pid;    // tracee pid
     };
 }
 

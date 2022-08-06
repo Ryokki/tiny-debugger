@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/minidbg.dir/src/minidbg.cpp.o CMakeFiles/minidbg.dir/ext/linenoise/linenoise.c.o  -o minidbg   -L/root/gitproject/minidbg/ext/libelfin/dwarf  -L/root/gitproject/minidbg/ext/libelfin/elf  -Wl,-rpath,/root/gitproject/minidbg/ext/libelfin/dwarf:/root/gitproject/minidbg/ext/libelfin/elf -ldwarf++ -lelf++ 
